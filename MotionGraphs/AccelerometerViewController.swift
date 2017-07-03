@@ -171,8 +171,8 @@ class AccelerometerViewController: UIViewController, MotionGraphContainer {
         
         motionManager.startAccelerometerUpdates(to: .main) { accelerometerData, error in
             guard let accelerometerData = accelerometerData else { return }
-            
-            let acceleration: double3 = [accelerometerData.acceleration.x, accelerometerData.acceleration.y, accelerometerData.acceleration.z]
+            // 默认重力为9.81
+            let acceleration: double3 = [accelerometerData.acceleration.x * 9.81, accelerometerData.acceleration.y * 9.81, accelerometerData.acceleration.z * 9.81]
             self.graphView.add(acceleration)
             self.setValueLabels(xyz: acceleration)
             // Save data to file

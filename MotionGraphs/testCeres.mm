@@ -37,7 +37,7 @@ extern void calibrateIMU(const char * accFileName, const char * gyrFileName){
     mp_calib.setInitStaticIntervalDuration(50.0);
     mp_calib.setInitAccCalibration( init_acc_calib );
     mp_calib.setInitGyroCalibration( init_gyro_calib );
-    mp_calib.setGravityMagnitude(9.80106);
+    mp_calib.setGravityMagnitude(9.8009492468906);
     mp_calib.enableVerboseOutput(true);
     mp_calib.enableAccUseMeans(false);
     //mp_calib.setGyroDataPeriod(0.01);
